@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verify Your Account</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 30px 15px;
+      background-color: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .header {
+      text-align: center;
+      padding-bottom: 20px;
+    }
+    .header img {
+      max-width: 150px;
+    }
+    .content {
+      padding: 5px;
+      text-align: center;
+    }
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 16px;
+      color: #ffffff;
+      background-color: #072a30;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+    .footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 12px;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <img src="https://res.cloudinary.com/dhap3isd2/image/upload/v1718628554/Kriapay_wordmark_logo_1_l0vi2m.png" alt="Kriapay Logo">
+    </div>
+    <div class="content">
+      <h1>Verify Your Account</h1>
+      <p>Hi <%= user.firstName %>,</p>
+      <p>Thank you for registering with us. Please enter the following number to continue:</p>
+      <p style="background:#F5F5F5;display:inline-block; font-weight:700; margin-top:24px; color:#000;text-transform:uppercase; font-size:20px;padding:10px 30px;display:inline-block;letter-spacing:25px;"><%= otp %></p>
+      <p>If you didn't create an account with us, please ignore this email.</p>
+    </div>
+    <div class="footer">
+      &copy; <%= new Date().getFullYear() %> KriaPay. All rights reserved.
+    </div>
+  </div>
+</body>
+</html>

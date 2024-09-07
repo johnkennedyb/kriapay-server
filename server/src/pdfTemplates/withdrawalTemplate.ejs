@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transaction Receipt</title>
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .header {
+      text-align: center;
+      background: #072A30;
+      padding: 30px 0px;
+    }
+    .logo {
+      width: 150px;
+    }
+    .content {
+      margin-top: 30px;
+      line-height: 2;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    .content h1 {
+      font-size: 26px;
+      font-weight: 700;
+    }
+    .footer {
+      margin-top: 40px;
+      text-align: center;
+      font-size: 12px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <img src="https://res.cloudinary.com/dhap3isd2/image/upload/v1718628554/Kriapay_wordmark_logo_2_dmgxbq.png" alt="Kriapay Logo" class="logo">
+  </div>
+  <div class="content">
+    <h1>Transaction Receipt</h1>
+    <p><strong>Transaction ID:</strong> <%= formattedData.transactionReference %></p>
+    <p><strong>Transaction type:</strong> <%= formattedData.type %></p>
+    <p><strong>Amount:</strong> <%= formattedData.withdrawal.currency %><%= formattedData.amount %></p>
+    <p><strong>Account name:</strong> <%= formattedData.withdrawal.accountName %></p>
+    <p><strong>Account number:</strong> <%= formattedData.withdrawal.accountNo %></p>
+    <p><strong>Bank name:</strong> <%= formattedData.withdrawal.bankName %></p>
+    <p><strong>Status:</strong> <%= formattedData.status %></p>
+    
+    <p><strong>Date:</strong> <%= formattedData.createdAt.toLocaleDateString() %> </p>
+  </div>
+  <div class="footer">
+    <p>Thank you for using our service!</p>
+  </div>
+</body>
+</html>
